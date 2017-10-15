@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ChatService.Interfaces;
 using ChatService.Models;
+using ChatService.Persistence;
 
 namespace ChatService
 {
@@ -10,6 +11,7 @@ namespace ChatService
         public ChatService()
         {
             this.ChatMessageRepository = new ChatMessageRepositoryInMemory();
+            //this.ChatMessageRepository = new ChatMessageRepositorySql("azurelab");
         }
 
         public ChatService(IChatMessageRepository chatMessageRepository)
