@@ -7,6 +7,7 @@ namespace ChatService
     public class ChatMessageRepositoryInMemory : IChatMessageRepository
     {
         private static List<ChatMessage> Repository { get; } = new List<ChatMessage>();
+
         public void AddMessage(ChatMessage chatMessage)
         {
             Repository.Add(chatMessage);
