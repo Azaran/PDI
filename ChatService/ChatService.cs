@@ -12,6 +12,7 @@ namespace ChatService
     {
         public ChatService()
         {
+            this.ChatMessageRepository = new ChatMessageRepositoryInMemory();
         }
 
         public ChatService(IChatMessageRepository chatMessageRepository)
